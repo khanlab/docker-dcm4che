@@ -1,7 +1,7 @@
 
 HUB_ACCOUNT=yinglilu
 NAME=dcm4che
-VERSION = 0.2
+VERSION = 0.3
 
 FULL_NAME=${HUB_ACCOUNT}/${NAME}:${VERSION}
 
