@@ -32,6 +32,9 @@ ENV PATH=/opt/dcm4che-3.3.8/bin:$PATH
 #For retrieving physio dicom files. without this line, all the physio series will not be retrieved with getscu
 RUN echo '1.3.12.2.1107.5.9.1:ImplicitVRLittleEndian;ExplicitVRLittleEndian' >>/opt/dcm4che-3.3.8/etc/getscu/store-tcs.properties
 
+#allow the getscu client to download CFMM's 9.4T data.
+RUN echo 'EnhancedMRImageStorage:ImplicitVRLittleEndian;ExplicitVRLittleEndian'>>/opt/dcm4che-3.3.8/etc/getscu/store-tcs.properties
+
 #########
 #fix error if run the singuairity image on graham:
 #   Error occurred during initialization of VM
